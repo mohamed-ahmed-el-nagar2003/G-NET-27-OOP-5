@@ -59,6 +59,30 @@
 
 
             #endregion
+
+            #region Q3
+
+            //Q3 : Explain the difference between a shallow copy and a deep copy. When would you use each one?
+            //What is the risk of using a shallow copy when the object has reference-type fields?
+            /*
+             1-  Shallow Copy
+            A shallow copy creates a new object, but it copies the values of the fields directly from the original object.
+
+            When to use it:
+           When the object contains only value types.
+           When sharing referenced objects is acceptable.
+
+            2. Deep Copy 
+             A deep copy creates a completely independent copy of the object.
+
+            When to use it:
+          When the object contains reference-type fields.
+          When you want the copied object to be fully independent from the original object.
+             */
+
+
+
+            #endregion
         }
     }
 }
