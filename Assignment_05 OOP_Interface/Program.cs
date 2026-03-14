@@ -97,6 +97,55 @@
 
              */
             #endregion
+
+            #region Cinema_System
+
+            Cinema cinema01 = new Cinema("City");
+            Console.WriteLine("===========================  Open Cinema  ==================================");
+            cinema01.Opencinem();
+
+            StandardTicket ST01 = new StandardTicket("A15", "Zaky Chann", 200);
+
+            VipTicket VT01 = new VipTicket(true, "Zaky Chann", 350);
+
+            IMAXTicket IMAXT01 = new IMAXTicket("Harly", 400, true);
+
+            cinema01.AddTicket(ST01);
+            cinema01.AddTicket(VT01);
+            cinema01.AddTicket(IMAXT01);
+
+
+            Console.WriteLine("===========================  Print All Tickets ==================================");
+            cinema01.PrintallTickets();
+
+            Console.WriteLine("============================= Clone a VIP ticket =============================");
+            VipTicket VT02 = VT01.clone();
+            VT02._MovieName = "Askar FEL Moasker";
+            VT01.print();
+            VT02.print();
+
+            Console.WriteLine("===========================  Canceld one Ticket ==================================");
+
+            Console.WriteLine(ST01.Cansel());
+            ST01.print();
+
+            Console.WriteLine("===========================  Use the utility method to print an array of printable tickets. ========================");
+
+
+            BookingHelper BH = new BookingHelper();
+            Iprintable[] iprintable = new Iprintable[20];
+
+            iprintable[0] = ST01;
+            iprintable[1] = VT01;
+            iprintable[2] = IMAXT01;
+
+            BH.print(iprintable);
+
+            Console.WriteLine("===========================  Close Cinema ==================================");
+            cinema01.CloseCinema();
+
+
+            #endregion
         }
     }
 }
